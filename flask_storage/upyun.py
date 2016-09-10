@@ -106,5 +106,5 @@ class UpyunStorage(BaseStorage):
         if isinstance(stream, file):
             length = os.fstat(stream.fileno()).st_size
             headers['Content-Length'] = length
-        self.request(uri, stream, 'PUT', headers)
+        self.request(uri, storage.read(), 'PUT', headers)
         return self.url(filename)
