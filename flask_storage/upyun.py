@@ -73,6 +73,7 @@ class UpyunStorage(BaseStorage):
 
         :param filename: Name of the file.
         """
+        base_url = ''
         if self.base_url is _missing:
             base_url = 'http://%s.b0.upaiyun.com/' % self.bucket
         else:
