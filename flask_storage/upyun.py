@@ -78,6 +78,7 @@ class UpyunStorage(BaseStorage):
         else:
             base_url = self.base_url
 
+        urlbase = ''
         if self.base_dir:
             urlbase = urljoin(base_url, self.base_dir)
 
